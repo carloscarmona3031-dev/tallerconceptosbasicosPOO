@@ -1,4 +1,4 @@
-﻿namespace Time
+﻿namespace Taller01
 
 {
     public class Time
@@ -96,8 +96,6 @@
             return ((long)_hour * 3600 + _minute * 60 + _second) * 1000 + _millisecond;
         }
 
-        public long ToMiliseconds() => ToMilliseconds();
-
         public long ToSeconds()
         {
             return ToMilliseconds() / 1000;
@@ -151,7 +149,6 @@
         }
 
         private bool ValidHours(int hour) => hour >= 0 && hour <= 23;
-        private bool ValidMillisecond() => _millisecond >= 0 && _millisecond <= 999;
         private bool ValidMillisecond(int ms) => ms >= 0 && ms <= 999;
         private bool ValidMinute(int minute) => minute >= 0 && minute <= 59;
         private bool ValidSecond(int second) => second >= 0 && second <= 59;

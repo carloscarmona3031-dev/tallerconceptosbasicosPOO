@@ -2,5 +2,7 @@
   <Folder Name="/TimeClass/">
     <Project Path="Time/Time.csproj" Id="f0f5bb18-c009-441a-8259-8265afa3f48b" />
   </Folder>
-  <Folder Name="/TimeExercise/" />
+  <Folder Name="/TimeExercise/">
+    <Project Path="TimeConsole/TimeConsole.csproj" Id="89ff5818-6e75-41ae-af45-1bb51572d172" />
+  </Folder>
 </Solution>
