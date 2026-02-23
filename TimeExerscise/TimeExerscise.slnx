@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/TimeClass/">
+    <Project Path="Time/Time.csproj" Id="f0f5bb18-c009-441a-8259-8265afa3f48b" />
+  </Folder>
+  <Folder Name="/TimeExercise/" />
+</Solution>
