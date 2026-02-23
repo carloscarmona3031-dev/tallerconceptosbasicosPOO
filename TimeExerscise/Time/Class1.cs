@@ -28,22 +28,22 @@
         {
             if (!ValidHours(hours))
             {
-                throw new ArgumentOutOfRangeException(nameof(hours));
+                throw new ArgumentException($"The Hour: {hours}, is not valid.");
             }
                 
             if (!ValidMinute(minutes))
             {
-                throw new ArgumentOutOfRangeException(nameof(minutes));
+                throw new ArgumentException($"The Minute: {minutes}, is not valid.");
             }
                 
             if (!ValidSecond(seconds))
             {
-                throw new ArgumentOutOfRangeException(nameof(seconds));
+                throw new ArgumentException($"The Seconds: {seconds}, is not valid.");
             }
                 
             if (!ValidMillisecond(milliseconds))
             {
-                throw new ArgumentOutOfRangeException(nameof(milliseconds));
+                throw new ArgumentException($"The Milliseconds: {milliseconds}, is not valid.");
             }
             _hour = hours;
             _minute = minutes;
@@ -56,7 +56,7 @@
             get => _hour;
             set
             {
-                if (!ValidHours(value)) throw new ArgumentOutOfRangeException(nameof(value));
+                if (!ValidHours(value)) throw new ArgumentException(nameof(value));
                 _hour = value;
             }
         }
@@ -66,7 +66,7 @@
             get => _minute;
             set
             {
-                if (!ValidMinute(value)) throw new ArgumentOutOfRangeException(nameof(value));
+                if (!ValidMinute(value)) throw new ArgumentException(nameof(value));
                 _minute = value;
             }
         }
@@ -76,7 +76,7 @@
             get => _second;
             set
             {
-                if (!ValidSecond(value)) throw new ArgumentOutOfRangeException(nameof(value));
+                if (!ValidSecond(value)) throw new ArgumentException(nameof(value));
                 _second = value;
             }
         }
@@ -86,7 +86,7 @@
             get => _millisecond;
             set
             {
-                if (!ValidMillisecond(value)) throw new ArgumentOutOfRangeException(nameof(value));
+                if (!ValidMillisecond(value)) throw new ArgumentException(nameof(value));
                 _millisecond = value;
             }
         }
