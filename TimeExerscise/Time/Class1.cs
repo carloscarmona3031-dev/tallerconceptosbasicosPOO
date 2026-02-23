@@ -8,6 +8,7 @@
         private int _second;
         private int _millisecond;
 
+        //constructors
         public Time()
             : this(0, 0, 0, 0)
         { }
@@ -50,7 +51,7 @@
             _second = seconds;
             _millisecond = milliseconds;
         }
-
+        //properties
         public int Hour
         {
             get => _hour;
@@ -90,7 +91,7 @@
                 _millisecond = value;
             }
         }
-
+        //metods
         public long ToMilliseconds()
         {
             return ((long)_hour * 3600 + _minute * 60 + _second) * 1000 + _millisecond;
@@ -105,7 +106,7 @@
         {
             return ToMilliseconds() / (60 * 1000);
         }
-
+        //suma de los times y devuelve la hora que resulta (pasa de dia)
         public Time Add(Time other)
         {
             if (other == null) throw new ArgumentNullException(nameof(other));
